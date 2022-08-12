@@ -21,7 +21,23 @@ class _StackDemoState extends State<StackDemo> {
         centerTitle: true,
         elevation: 0,
       ),
-      body: Container(),
+      body: ConstrainedBox(
+        constraints: const BoxConstraints.expand(),
+        child: Stack(
+          alignment: Alignment.center, //指定未定位或部分定位widget的对齐方式
+          children: [
+            Container(
+              color: Colors.red,
+              child: const Text(
+                "Hello world",
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+            const Positioned(left: 18.0, child: Text("I am Jack")),
+            const Positioned(top: 18.0, child: Text("Your friend"))
+          ],
+        ),
+      ),
     );
   }
 }
