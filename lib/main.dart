@@ -4,9 +4,12 @@ import 'package:action/pages/constraints_demo.dart';
 import 'package:action/pages/debug_demo.dart';
 import 'package:action/pages/fitted_demo.dart';
 import 'package:action/pages/form_demo.dart';
+import 'package:action/pages/gridview_demo.dart';
 import 'package:action/pages/input_demo.dart';
 import 'package:action/pages/container_demo.dart';
+import 'package:action/pages/listview_demo.dart';
 import 'package:action/pages/scaffold_demo.dart';
+import 'package:action/pages/scrollview_demo.dart';
 import 'package:action/pages/stack_demo.dart';
 import 'package:action/pages/switch_demo.dart';
 import 'package:action/pages/wrap_demo.dart';
@@ -29,6 +32,9 @@ void main() {
       '/container_demo': (context) => const ContainerDemo(),
       '/clip_demo': (context) => const ClipDemo(),
       '/fitted_demo': (context) => const FittedDemo(),
+      '/scrollview_demo': (context) => const ScrollViewDemo(),
+      '/listview_demo': (context) => const ListViewDemo(),
+      '/gridview_demo': (context) => const GridViewDemo(),
     },
   ));
 }
@@ -49,6 +55,9 @@ class MyApp extends StatelessWidget {
     'Container',
     'Clip',
     'FittedBox',
+    'SCrollView',
+    'Infinite ListView',
+    'GridView',
   ];
   final List<String> routes = const [
     '/scaffold_demo',
@@ -63,6 +72,9 @@ class MyApp extends StatelessWidget {
     '/container_demo',
     '/clip_demo',
     '/fitted_demo',
+    '/scrollview_demo',
+    '/listview_demo',
+    '/gridview_demo'
   ];
 
   @override
